@@ -11,7 +11,7 @@ def getMatrizLuminosidade(caminhoImagem) :
         imagemMatriz = [[0 for x in range(width)] for y in range(height)] 
 
         for x in range(0, width) :
-                for y in range(0, height) :        
+                for y in range(0, height) : 
                         r, g, b = imagemRenderizada.getpixel((x, y))
 
                         # Calculo luminosidade
