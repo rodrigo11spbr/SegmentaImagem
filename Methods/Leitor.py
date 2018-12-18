@@ -2,7 +2,7 @@ from PIL import Image
 
 caminhoImagem = 'AnaliseImagem/Imgs/Mario.jpg'
 
-def getMatrizLuminosidade(caminhoImagem) :
+def getMatrizMae(caminhoImagem) :
     
         imagemRenderizada = Image.open(caminhoImagem).convert('RGB')
 
@@ -13,7 +13,7 @@ def getMatrizLuminosidade(caminhoImagem) :
         for x in range(0, width) :
                 for y in range(0, height) : 
                         r, g, b = imagemRenderizada.getpixel((x, y))
-
+gi
                         # Calculo luminosidade
                         red = round(r * 0.3)
                         green = round(g * 0.59)
@@ -24,4 +24,4 @@ def getMatrizLuminosidade(caminhoImagem) :
         print(imagemMatriz)
         
 if __name__ == '__main__' :
-    getMatrizLuminosidade(caminhoImagem)
+    getMatrizMae(caminhoImagem)
