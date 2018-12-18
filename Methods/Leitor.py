@@ -19,7 +19,7 @@ def getMatrizLuminosidade(caminhoImagem) :
                         green = round(g * 0.59)
                         blue = round(b * 0.11)
                         
-                        imagemMatriz[x][y] = red, green, blue
+                        imagemMatriz[x][y] = red + green + blue
         
         print(imagemMatriz)
         
