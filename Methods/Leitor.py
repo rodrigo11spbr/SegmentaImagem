@@ -1,5 +1,4 @@
 from PIL import Image
-import numpy as np
 
 caminhoImagem = 'AnaliseImagem/Imgs/Mario.jpg'
 
@@ -9,8 +8,10 @@ def getMatrizLuminosidade(caminhoImagem) :
 
         width, height = imagemRenderizada.size
 
-        for x in range(width) :
-                for y in range(height) :        
+        imagemMatriz = [[0 for x in range(width)] for y in range(height)] 
+
+        for x in range(0, width) :
+                for y in range(0, height) :        
                         r, g, b = imagemRenderizada.getpixel((x, y))
 
                         # Calculo luminosidade
@@ -18,10 +19,8 @@ def getMatrizLuminosidade(caminhoImagem) :
                         green = round(g * 0.59)
                         blue = round(b * 0.11)
                         
-                        imagemMatriz = np.matrix('{} {} {}'.format(red, green, blue))
-
-                        # imagemMatriz = [[red, green, blue]]
-
+                        imagemMatriz[x][y] = red, green, blue
+        
         print(imagemMatriz)
         
 if __name__ == '__main__' :
