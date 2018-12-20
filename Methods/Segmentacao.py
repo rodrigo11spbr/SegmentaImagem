@@ -31,19 +31,16 @@ def getMatrizMae(caminhoImagem) :
 
 def segmentarImagem(matrizMae) :
         width, height, matriz = matrizMae
-        MatrizSegmentadaFundo = [[0 for x in range(width)] for y in range(height)] 
+        MatrizSegmentada = [[0 for x in range(width)] for y in range(height)]
 
         for x in range(0, width) :
                 for y in range(0, height) :
-                        if matriz[x][y] >= 160 and matriz[x][y] <= 195:
-                                MatrizSegmentadaFundo[x][y] = matriz[x][y]
-                        else:
-                                MatrizSegmentadaFundo[x][y] = 0
-
-        #Monta a imagem e apresenta
-        imagemArray = np.asarray(MatrizSegmentadaFundo)
-        imagemMontar = Image.fromarray(imagemArray)
-        imagemMontar.show()
+                        if matriz[x][y] <= 186 :
+                                MatrizSegmentada[x][y] = matriz[x][y]
+                        else :
+                                MatrizSegmentada[x][y] = 123
+        #Monta a imagem
+        imagemMontar = Image.fromarray(np.asarray(MatrizSegmentada)).show()
 
 if __name__ == '__main__' :
 
