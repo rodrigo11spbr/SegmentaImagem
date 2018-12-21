@@ -1,6 +1,3 @@
-from PIL import Image
-import numpy as np
-
 from processamento import Processamento
 
 caminhoImagem = 'AnaliseImagem/Imgs/Mario.jpg'
