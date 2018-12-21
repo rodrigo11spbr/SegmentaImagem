@@ -11,10 +11,10 @@ def segmentarImagem(caminhoImagem) :
 
         for x in range(0, largura) :
                 for y in range(0, altura) :
-                        if matriz[x][y] <= 186 :
+                        if matriz[x][y] != 185 and matriz[x][y] != 186 :
                                 MatrizSegmentada[x][y] = matriz[x][y]
                         else :
-                                MatrizSegmentada[x][y] = 123
+                                MatrizSegmentada[x][y] = 0
 
         Processamento.montar_imagem_array(MatrizSegmentada)
 
