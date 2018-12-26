@@ -2,10 +2,6 @@ from PIL import Image
 import numpy as np
 
 class Processamento:
-
-    constante_pixel = 0
-    media_constante = 20
-
     def get_propriedade_imagem(caminho_imagem) :
         imagem = Image.open(caminho_imagem).convert('RGB')
 

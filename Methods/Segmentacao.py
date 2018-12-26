@@ -14,10 +14,11 @@ def segmentar(caminhoImagem) :
                 for y in range(0, largura) :
 
                         # FUNÇÃO DE MUNFORD–SHAH
-                        constante_pixel = matriz_original[y][x]     
+                        constante_pixel = matriz_original[y][x]
                         for a in range(0, altura) :
                                 for l in range(0, largura) :
                                         pixel = matriz_original[l][a]
+
                                         if Processamento.verifica_pixel(pixel, constante_pixel, CONST_MEDIA) :
                                                 matriz_segmentada[l][a] = pixel
                                         else :
